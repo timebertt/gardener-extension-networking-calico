@@ -31,6 +31,8 @@ spec:
         k8s-app: calico-kube-controllers
         gardener.cloud/role: system-component
     spec:
+      nodeSelector:
+        networking.shoot.gardener.cloud/provider: calico
       tolerations:
       # Allow scheduling on fresh nodes before CNI is installed, but do not
       # tolerate node.kubernetes.io/unschedulable so that drain/cordon works.

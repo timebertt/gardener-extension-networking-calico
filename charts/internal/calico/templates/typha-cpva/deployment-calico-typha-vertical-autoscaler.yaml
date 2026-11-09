@@ -27,6 +27,8 @@ spec:
         origin: gardener
         k8s-app: calico-typha-vertical-autoscaler
     spec:
+      nodeSelector:
+        networking.shoot.gardener.cloud/provider: calico
       priorityClassName: gardener-shoot-system-800
       # Make sure to not use the coredns for DNS resolution.
       dnsPolicy: Default

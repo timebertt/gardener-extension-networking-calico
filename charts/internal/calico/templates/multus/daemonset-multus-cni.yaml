@@ -31,6 +31,7 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/os: linux
+        networking.shoot.gardener.cloud/provider: calico
       hostNetwork: true
       tolerations:
         # Make sure multus gets scheduled on all nodes.
