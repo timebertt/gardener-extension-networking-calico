@@ -23,8 +23,6 @@ spec:
         networking.gardener.cloud/to-apiserver: allowed
         networking.gardener.cloud/to-dns: allowed
     spec:
-      nodeSelector:
-        networking.shoot.gardener.cloud/provider: calico
       priorityClassName: system-cluster-critical
       securityContext:
         runAsNonRoot: true
